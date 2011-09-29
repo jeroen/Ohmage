@@ -1,0 +1,10 @@
+Package: Ohmage
+Type: Package
+Title: R Client for Mobilize/Andwellness server
+Version: 0.3
+Date: 2011-05-10
+Author: Jeroen Ooms
+Maintainer: Jeroen Ooms <jeroen.ooms@stat.ucla.edu>
+Description: R Client for Mobilize and Andwellness server. Implements basic R functions to call and process data.
+License: Private
+Depends: RCurl, opencpu.encode, XML
