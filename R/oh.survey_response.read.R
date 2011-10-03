@@ -6,6 +6,11 @@
 
 oh.survey_response.read <- function(campaign_urn, prompt_id_list="urn:ohmage:special:all", privacy_state="both", column_list="urn:ohmage:user:id,urn:ohmage:prompt:response,urn:ohmage:context:utc_timestamp", output_format="json-columns", user_list="urn:ohmage:special:all", to.data.frame=TRUE, ...){
 
+	#if prompt_id_list is a vector:
+	prompt_id_list <- paste(prompt_id_list, collapse=",");
+	column_list <- paste(column_list, collapse=",");
+	user_list <- paste(user_list, collapse=",");
+	
 	if(privacy_state=="both"){
 		xhr <- oh.call("/survey_response/read ",campaign_urn=campaign_urn, prompt_id_list=prompt_id_list, column_list=column_list, output_format=output_format, user_list=user_list, ...);			
 	} else {	

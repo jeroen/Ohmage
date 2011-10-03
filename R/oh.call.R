@@ -1,18 +1,23 @@
 # Author: jeroen
 ###############################################################################
 
-oh.call <- function(xpath, responseformat="json", verbose=FALSE, ...){
+oh.call <- function(xpath, serverurl=SERVERURL, token=TOKEN, responseformat="json", verbose=FALSE, ...){
 	if(verbose){
 		print(match.call());
 	}
 	
-	posturl <- paste(SERVERURL, xpath, sep="");
+	if(is.null(serverurl)){
+		stop("Serverurl is missing. Either use oh.login() or specify 'serverurl' and 'token' arguments in plot call.")
+	}
+	
+	posturl <- paste(serverurl, xpath, sep="");
 	
 	curl = getCurlHandle()
 	h = dynCurlReader(curl, binary = TRUE)
 	
-	if(!is.null(TOKEN)){
-		response <- postForm(curl = curl, uri=posturl, .opts = list(ssl.verifyhost= FALSE, ssl.verifypeer=FALSE, headerfunction = h$update, verbose = verbose, connecttimeout=10), client=CLIENTNAME, style="post", binary=TRUE, auth_token=TOKEN, ...);	  		
+	#some calls don't need a token (e.g. /auth_token)
+	if(!is.null(token)){
+		response <- postForm(curl = curl, uri=posturl, .opts = list(ssl.verifyhost= FALSE, ssl.verifypeer=FALSE, headerfunction = h$update, verbose = verbose, connecttimeout=10), client=CLIENTNAME, style="post", binary=TRUE, auth_token=token, ...);	  		
 	} else {
 		response <- postForm(curl = curl, uri=posturl, .opts = list(ssl.verifyhost= FALSE, ssl.verifypeer=FALSE, headerfunction = h$update, verbose = verbose, connecttimeout=10), client=CLIENTNAME, style="post", binary=TRUE, ...);		
 	}

@@ -3,9 +3,9 @@
 # Author: jeroen
 ###############################################################################
 
-oh.auth_token <-	function(user, password, ...){
+oh.auth_token <- function(user, password, ...){
+	#when using oh.login, argument 'serverurl' is part of the ... ellipse
 	xhr <- oh.call("/user/auth_token", user=user, password=password, ...);
-	assign("TOKEN",xhr$token,"package:Ohmage");
 	message("Login successful.");
 	return(xhr$token);
 }
