@@ -1,10 +1,19 @@
 # Author: jeroen
 ###############################################################################
 
-oh.call <- function(xpath, serverurl=SERVERURL, token=TOKEN, responseformat="json", verbose=FALSE, ...){
-	if(verbose){
-		print(match.call());
-	}
+oh.call <- function(xpath, serverurl=getOption("SERVERURL"), token=getOption("TOKEN"), 
+	responseformat="json", style="post", verbose=FALSE, recycle=FALSE, ...){
+
+	#if(verbose){
+	#	#print(match.call());
+	#	callargs <- as.list(match.call())[-1];
+	#	for(i in 1:length(callargs)){
+	#		try(callargs[[i]] <- eval.parent(callargs[[i]]));
+	#	}	
+	#	cat(" ----- Oh.call Arguments -----\n")
+	#	print(callargs);
+	#	
+	#}
 	
 	if(is.null(serverurl)){
 		stop("Serverurl is missing. Either use oh.login() or specify 'serverurl' and 'token' arguments in plot call.")
@@ -12,22 +21,44 @@ oh.call <- function(xpath, serverurl=SERVERURL, token=TOKEN, responseformat="jso
 	
 	posturl <- paste(serverurl, xpath, sep="");
 	
-	curl = getCurlHandle()
-	h = dynCurlReader(curl, binary = TRUE)
-	
-	#some calls don't need a token (e.g. /auth_token)
-	if(!is.null(token)){
-		response <- postForm(curl = curl, uri=posturl, .opts = list(ssl.verifyhost= FALSE, ssl.verifypeer=FALSE, headerfunction = h$update, verbose = verbose, connecttimeout=10), client=CLIENTNAME, style="post", binary=TRUE, auth_token=token, ...);	  		
+	if(recycle){
+		curl = getOption("OhCurlHandle");
+		h = getOption("OhCurlReader");
+		h$reset();
+		increment.curlcount();
 	} else {
-		response <- postForm(curl = curl, uri=posturl, .opts = list(ssl.verifyhost= FALSE, ssl.verifypeer=FALSE, headerfunction = h$update, verbose = verbose, connecttimeout=10), client=CLIENTNAME, style="post", binary=TRUE, ...);		
+		curl = getCurlHandle()
+		h = dynCurlReader(curl, binary = TRUE)		
 	}
 
+	#some calls don't need a token (e.g. /auth_token)
+	if(!is.null(token)){
+		HTTPPARAMS <- list(client=getOption("CLIENTNAME"), auth_token=token, ...);	  		
+	} else {
+		if(verbose) message("Note: calling without auth_token...")		
+		HTTPPARAMS <- list(client=getOption("CLIENTNAME"), ...);		
+	}
+	
+	if(verbose){
+		cat(" -------- Ohmage verbose output (", as.character(Sys.time(), usetz = TRUE), ") --------\n\n")
+		cat("POST ", posturl, "\n\n")
+		print.param.list(HTTPPARAMS);
+	}
+
+	#actual HTTP POST
+	postForm(curl = curl, uri=posturl, style=style, binary=TRUE, .params=HTTPPARAMS,
+		.opts = list(ssl.verifyhost= FALSE, ssl.verifypeer=FALSE, headerfunction = h$update, verbose = verbose, connecttimeout=10));	
+	
+	
 	#parse response
 	headers <- parseHTTPHeader(h$header());
 	httpstatus <- headers[["status"]];
 	response <- h$value();
 	
-	if(verbose) cat("HTTP", httpstatus, "\n");
+	if(verbose) {
+		cat("-------- Ohmage response: --------\n\n")
+		cat("HTTP", httpstatus, "\n");
+	}
 
 	if(httpstatus != 200){
 		if(is.raw(response)){

@@ -4,14 +4,19 @@
 ###############################################################################
 
 
+#' Depricated wrapper for oh.survey_response.read
+#' @param serverurl url of server 
+#' @param token token
+#' @param ... other args
+#' @export
 oh.getdata <- function(serverurl, token, ...){
 	
 	if(is.null(token) | is.null(serverurl)){
 		stop("Need to supply both server and valid token.");
 	}
 	
-	assign("SERVERURL", serverurl, "package:Ohmage");
-	assign("TOKEN", token, "package:Ohmage");
+	options(SERVERURL = serverurl)
+	options(TOKEN=token)
 	
 	#remainig arguments should contain read data.
 	mydata <- oh.survey_response.read(...);	

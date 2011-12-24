@@ -3,12 +3,15 @@
 # Author: jeroen
 ###############################################################################
 
+#' Logout from an ohmage session
+#' @export
 oh.logout <- function(){
-	if(is.null(Ohmage::TOKEN)){
+	if(is.null(getOption("TOKEN"))){
 		stop("Not logged in.");
 	}
-	assign("TOKEN", NULL, "package:Ohmage");
-	assign("SERVERURL", NULL, "package:Ohmage");
+	options(TOKEN = NULL);
+	options(SERVERURL = NULL);
+	options(ohmage_username = NULL)
 	message("Logged out.\n")
 }
 

@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<campaign>
+  <campaignUrn>urn:campaign:ca:lausd:Addams_HS:CS101:Fall:2011:Sleep</campaignUrn>
+  <campaignName>Sleep</campaignName>
+  <serverUrl>https://dev1.andwellness.org/</serverUrl>
+  
+  <surveys>
+
+    <survey>
+      <id>SleepPattern</id>
+      <title>Sleep Pattern</title>
+      <description>Observe and collect sleep pattern</description>
+      <submitText>sleep pattern</submitText>
+      <showSummary>false</showSummary>
+      <editSummary>false</editSummary>
+      <summaryText>Observe and collect forms of advertising media in the community</summaryText>
+      <anytime>true</anytime>
+    
+      <contentList>
+
+        <prompt>
+          <id>WakeupTime</id>
+          <displayType>event</displayType>
+          <displayLabel>Wakeup time</displayLabel>
+          <promptText>What time did you wake up this morning?</promptText>
+          <abbreviatedText>Wake up time</abbreviatedText>
+          <promptType>single_choice</promptType>
+          <properties>
+            <property>
+              <key>0</key>
+              <label>Before 5:00 am</label>
+            </property>
+            <property>
+              <key>1</key>
+              <label>5:00-5:30 am</label>
+            </property>
+            <property>
+              <key>2</key>
+              <label>5:30-6:00 am</label>
+            </property>
+            <property>
+              <key>3</key>
+              <label>6:00-6:30 am</label>
+            </property>
+            <property>
+              <key>4</key>
+              <label>6:30-7:00 am</label>
+            </property>
+            <property>
+              <key>5</key>
+              <label>7:00-7:30 am</label>
+            </property>
+            <property>
+              <key>6</key>
+              <label>7:30-8:00 am</label>
+            </property>
+            <property>
+              <key>7</key>
+              <label>8:00-8:30 am</label>
+            </property>
+            <property>
+              <key>8</key>
+              <label>8:00-9:00 am</label>
+            </property>
+            <property>
+              <key>9</key>
+              <label>9:00-9:30 am</label>
+            </property>
+            <property>
+              <key>10</key>
+              <label>9:30-10:00 am</label>
+            </property>
+            <property>
+              <key>11</key>
+              <label>10:00-10:30 am</label>
+            </property>
+            <property>
+              <key>12</key>
+              <label>10:30-11:00 am</label>
+            </property>
+            <property>
+              <key>13</key>
+              <label>11:00-11:30 am</label>
+            </property>
+            <property>
+              <key>14</key>
+              <label>11:30 am-12:00 pm</label>
+            </property>
+            <property>
+              <key>15</key>
+              <label>After 12:00 pm</label>
+            </property>
+          </properties>
+          <skippable>false</skippable>
+        </prompt>
+
+        <prompt>
+          <id>SleepTime</id>
+          <displayType>event</displayType>
+          <displayLabel>Sleep time</displayLabel>
+          <promptText>What time did you go to bed last night?</promptText>
+          <abbreviatedText>What time did you go to bed last night?</abbreviatedText>
+          <promptType>single_choice</promptType>
+          <properties>
+            <property>
+              <key>0</key>
+              <label>Before 9 pm</label>
+            </property>
+            <property>
+              <key>1</key>
+              <label>9:00-9:30 pm</label>
+            </property>
+            <property>
+              <key>2</key>
+              <label>9:30-10:00 pm</label>
+            </property>
+            <property>
+              <key>3</key>
+              <label>10:00-10:30 pm</label>
+            </property>
+            <property>
+              <key>4</key>
+              <label>10:30-11:00 pm</label>
+            </property>
+            <property>
+              <key>5</key>
+              <label>11:00-11:30 pm</label>
+            </property>
+            <property>
+              <key>6</key>
+              <label>11:30 pm-12:00 am</label>
+            </property>
+            <property>
+              <key>7</key>
+              <label>12:00-12:30 am</label>
+            </property>
+            <property>
+              <key>8</key>
+              <label>12:30-1:00 am</label>
+            </property>
+            <property>
+              <key>9</key>
+              <label>1:00-1:30 am</label>
+            </property>
+            <property>
+              <key>10</key>
+              <label>1:30-2:00 am</label>
+            </property>
+            <property>
+              <key>11</key>
+              <label>After 2:00 am</label>
+            </property>
+          </properties>
+          <skippable>false</skippable>
+        </prompt>
+
+        <prompt>
+          <id>timeToFallAsleep</id>
+          <displayType>category</displayType>
+          <displayLabel>Time to Sleep</displayLabel>
+          <promptText>Compared to normal, how long did it take you to fall asleep?</promptText>
+          <abbreviatedText>Time to fall asleep</abbreviatedText>
+          <promptType>single_choice</promptType>
+          <properties>
+            <property>
+              <key>0</key>
+              <label>Shorter</label>
+            </property>
+            <property>
+              <key>1</key>
+              <label>Normal</label>
+            </property>
+            <property>
+              <key>2</key>
+              <label>Longer</label>
+            </property>
+          </properties>
+          <skippable>false</skippable>
+        </prompt>
+
+        <prompt>
+          <id>HoursOfSleep</id>
+          <displayType>measurement</displayType>
+          <displayLabel>Number hours of sleep</displayLabel>
+          <promptText>How many hours of sleep did you get?</promptText>
+          <abbreviatedText>Number hours of sleep</abbreviatedText>
+          <promptType>number</promptType>
+           <properties>
+            <property>
+              <key>min</key>
+              <label>0</label>
+            </property>
+            <property>
+              <key>max</key>
+              <label>24</label>
+            </property>
+          </properties>
+	  <default>8</default>
+          <skippable>false</skippable>
+        </prompt>
+
+        <prompt>
+          <id>TimesWakeup</id>
+          <displayType>category</displayType>
+          <displayLabel>Times wakeup</displayLabel>
+          <promptText>How many times did you wake up during the night?</promptText>
+          <abbreviatedText>Number of times wakeup during the night</abbreviatedText>
+          <promptType>single_choice</promptType>
+          <properties>
+            <property>
+              <key>0</key>
+              <label>0</label>
+	      <value>0</value>
+            </property>
+            <property>
+              <key>1</key>
+              <label>1</label>
+	      <value>1</value>
+            </property>
+            <property>
+              <key>2</key>
+              <label>2</label>
+	      <value>2</value>
+            </property>
+            <property>
+              <key>3</key>
+              <label>3 or more</label>
+	      <value>3</value>
+            </property>
+          </properties>
+          <skippable>false</skippable>
+        </prompt>
+
+        <prompt>
+          <id>SleepQuality</id>
+          <displayType>category</displayType>
+          <displayLabel>Sleep quality</displayLabel>
+          <promptText>How would you rate your sleep quality?</promptText>
+          <abbreviatedText>Sleep quality</abbreviatedText>
+          <promptType>single_choice</promptType>
+          <properties>
+            <property>
+              <key>0</key>
+              <label>Very bad</label>
+	      <value>-2</value>
+            </property>
+            <property>
+              <key>1</key>
+              <label>Bad</label>
+	      <value>-1</value>
+            </property>
+            <property>
+              <key>2</key>
+              <label>Ok</label>
+	      <value>0</value>
+            </property>
+            <property>
+              <key>3</key>
+              <label>Good</label>
+	      <value>1</value>
+            </property>
+            <property>
+              <key>4</key>
+              <label>Very good</label>
+	      <value>2</value>
+            </property>
+          </properties>
+          <skippable>false</skippable>
+        </prompt>
+
+        <prompt>
+          <id>ActivityBeforeSleep</id>
+          <displayType>category</displayType>
+          <displayLabel>Activity before Sleep</displayLabel>
+          <promptText>What were you doing during the hour before going to bed?</promptText>
+          <abbreviatedText>Activity before sleep</abbreviatedText>
+          <promptType>single_choice</promptType>
+          <properties>
+            <property>
+              <key>0</key>
+              <label>Homework</label>
+            </property>
+            <property>
+              <key>1</key>
+              <label>Internet</label>
+            </property>
+            <property>
+              <key>2</key>
+              <label>Games</label>
+            </property>
+            <property>
+              <key>3</key>
+              <label>TV</label>
+            </property>
+            <property>
+              <key>4</key>
+              <label>Socializing</label>
+            </property>
+            <property>
+              <key>5</key>
+              <label>Social-networking</label>
+            </property>
+            <property>
+              <key>6</key>
+              <label>Chores</label>
+            </property>
+            <property>
+              <key>7</key>
+              <label>Reading</label>
+            </property>
+            <property>
+              <key>8</key>
+              <label>Other</label>
+            </property>
+          </properties>
+          <skippable>false</skippable>
+        </prompt>
+
+        <prompt>
+          <id>PhoneInterruption</id>
+          <displayType>category</displayType>
+          <displayLabel>Phone/SMS Sleep Interruption</displayLabel>
+          <promptText>If you woke up during the night, was it because of phone calls/text messages?</promptText>
+          <abbreviatedText>Phone/SMS Sleep Interruption?</abbreviatedText>
+          <promptType>single_choice</promptType>
+          <properties>
+            <property>
+              <key>0</key>
+              <label>No</label>
+	      <value>0</value>
+            </property>
+            <property>
+              <key>1</key>
+              <label>Yes</label>
+	      <value>1</value>
+            </property>
+          </properties>
+          <skippable>false</skippable>
+        </prompt>
+      </contentList>
+    </survey>
+
+    <survey>
+      <id>SleepImpact</id>
+      <title>Sleep Impact</title>
+      <description>Observe how you feel compared to normal during the day.</description>
+      <submitText>Sleep Impact</submitText>
+      <showSummary>false</showSummary>
+      <editSummary>false</editSummary>
+      <summaryText>Observe how you feel compared to normal during the day</summaryText>
+      <anytime>true</anytime>
+
+      <contentList>
+	<prompt>
+          <id>HowTired</id>
+          <displayType>event</displayType>
+          <displayLabel>Tiredness Level</displayLabel>
+          <promptText>How tired do you feel compared to normal?</promptText>
+          <abbreviatedText>When tired do you feel?</abbreviatedText>
+          <promptType>single_choice</promptType>
+          <properties>
+            <property>
+              <key>0</key>
+              <label>More tired</label>
+	      <value>-1</value>
+            </property>
+            <property>
+              <key>1</key>
+              <label>Normal</label>
+	      <value>0</value>
+            </property>
+            <property>
+              <key>2</key>
+              <label>Less tired</label>
+	      <value>1</value>
+            </property>
+          </properties>
+          <skippable>false</skippable>
+        </prompt>
+
+	<prompt>
+          <id>Concentration</id>
+          <displayType>event</displayType>
+          <displayLabel>Concentration Level</displayLabel>
+          <promptText>How well can you concentrate compared to normal?</promptText>
+          <abbreviatedText>Concentration Level?</abbreviatedText>
+          <promptType>single_choice</promptType>
+          <properties>
+            <property>
+              <key>0</key>
+              <label>Less clear</label>
+	      <value>-1</value>
+            </property>
+            <property>
+              <key>1</key>
+              <label>Normal</label>
+	      <value>0</value>
+            </property>
+            <property>
+              <key>2</key>
+              <label>More clear</label>
+	      <value>1</value>
+            </property>
+          </properties>
+          <skippable>false</skippable>
+        </prompt>
+
+      </contentList>
+    </survey>
+  </surveys>
+</campaign>

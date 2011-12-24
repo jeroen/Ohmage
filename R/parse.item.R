@@ -7,7 +7,7 @@
 parse.item <- function(obj){
 	varname <- names(obj);
 	
-	datevariables <- c("urn:ohmage:context:utc_timestamp");
+	datevariables <- c("urn:ohmage:context:utc_timestamp", "urn:ohmage:context:timestamp");
 	textvariables <- c("urn:ohmage:survey:privacy_state","urn:ohmage:user:id","urn:ohmage:context:location:latitude","urn:ohmage:context:location:longitude");
 	factorvariables <- c("urn:ohmage:survey:id")
 	
