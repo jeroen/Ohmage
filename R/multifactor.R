@@ -4,7 +4,15 @@
 ###############################################################################
 
 
-multifactor <- function(values, levels, labels, ordered=TRUE){
+#' Multifactor is a datastructure for survey items in the form of 'check all that apply'. Every response has multiple values.
+#' @param values a list of vectors with response values
+#' @param levels a vector with possible values 
+#' @param labels a vector with labels
+#' @param ordered ordered or unordered factor
+#' @return a multifactor object
+#' @aliases as.vector.multifactor expand.multifactor dim.multifactor is.multifactor as.vector.multifactor rep.multifactor [.multifactor [[.multifactor
+#' @export
+multifactor <- function(values, levels = unique(unlist(values)), labels=levels, ordered=TRUE){
 	newvalues <- sapply(values, paste, collapse="+");
 	newvalues[is.na(values)] <- NA;
 	attr(newvalues, "levels") <- levels;
@@ -14,6 +22,7 @@ multifactor <- function(values, levels, labels, ordered=TRUE){
 	return(newvalues);	
 }
 
+#' @export
 as.vector.multifactor <- function(x, mode){
 	myvec <- unlist(strsplit(x, "+", fixed=TRUE));
 	myfactor <- factor(myvec, attr(x, "levels"), attr(x, "labels"), attr(x, "ordered"));
@@ -27,6 +36,7 @@ levelinfactor <- function(mylist, mylevel){
 	return(sapply(sapply(mylist, "==", mylevel), any));
 }
 
+#' @export
 expand.multifactor <- function(x){
 	newvalues <- strsplit(x, "+", fixed=TRUE);
 	mydf <- as.data.frame(sapply(attr(x, "levels"), levelinfactor, mylist=newvalues));
@@ -34,10 +44,12 @@ expand.multifactor <- function(x){
 	return(mydf);
 }
 
+#' @export
 dim.multifactor <- function(x){
 	return(sapply(strsplit(x, "+", fixed=TRUE), length));
 }
 
+#' @export
 is.multifactor <- function(x){
 	if("multifactor" %in% class(x)) {
 		return(TRUE)
@@ -46,6 +58,7 @@ is.multifactor <- function(x){
 	}
 }
 
+#' @export
 "[.multifactor" <- function(x, ..., drop = FALSE){
 	y <- NextMethod("[")
 	attr(y, "labels") <- attr(x, "labels")
@@ -61,6 +74,7 @@ is.multifactor <- function(x){
 	else y	
 }
 
+#' @export
 "[[.multifactor" <- function (x, ...) {
 	y <- NextMethod("[[")
 	attr(y, "labels") <- attr(x, "labels")
@@ -71,6 +85,7 @@ is.multifactor <- function(x){
 	y
 }
 
+#' @export
 rep.multifactor <- function (x, ...) 
 {
 	y <- NextMethod()

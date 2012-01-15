@@ -1,19 +1,9 @@
 # Author: jeroen
 ###############################################################################
 
+
 oh.call <- function(xpath, serverurl=getOption("SERVERURL"), token=getOption("TOKEN"), 
 	responseformat="json", style="post", verbose=FALSE, recycle=FALSE, ...){
-
-	#if(verbose){
-	#	#print(match.call());
-	#	callargs <- as.list(match.call())[-1];
-	#	for(i in 1:length(callargs)){
-	#		try(callargs[[i]] <- eval.parent(callargs[[i]]));
-	#	}	
-	#	cat(" ----- Oh.call Arguments -----\n")
-	#	print(callargs);
-	#	
-	#}
 	
 	if(is.null(serverurl)){
 		stop("Serverurl is missing. Either use oh.login() or specify 'serverurl' and 'token' arguments in plot call.")
@@ -47,7 +37,7 @@ oh.call <- function(xpath, serverurl=getOption("SERVERURL"), token=getOption("TO
 
 	#actual HTTP POST
 	postForm(curl = curl, uri=posturl, style=style, binary=TRUE, .params=HTTPPARAMS,
-		.opts = list(ssl.verifyhost= FALSE, ssl.verifypeer=FALSE, headerfunction = h$update, verbose = verbose, connecttimeout=10));	
+		.opts = list(sslversion=3, ssl.verifyhost= FALSE, ssl.verifypeer=FALSE, headerfunction = h$update, verbose = verbose, connecttimeout=10));	
 	
 	
 	#parse response

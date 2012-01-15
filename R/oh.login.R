@@ -3,15 +3,22 @@
 #' @param password ohmage passwd
 #' @param serverurl url to the ohmage server
 #' @param ... extra parameters for oh.call
+#' @importFrom RJSONIO fromJSON
+#' @importFrom RCurl postForm getCurlHandle dynCurlReader parseHTTPHeader fileUpload
 #' @return null
 #' @author jeroen
-#' @example examples/example.R
 #' @export
 
 oh.login <- function(user, password, serverurl, ...){
 	if(!is.null(getOption("TOKEN"))){
 		stop("Already logged in. Please logout first.");
-	}	
+	}
+	
+	#create a new curl handler for recycling sessions
+	options(OhCurlHandle = getCurlHandle());
+	options(OhCurlReader = dynCurlReader(getOption("OhCurlHandle"), binary = TRUE));
+	
+	#try to login
 	message("Trying to login to ", serverurl, " with username: ",user);
 	mytoken <- oh.auth_token(user, password, serverurl, ...);
 

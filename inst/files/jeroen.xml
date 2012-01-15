@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<campaign>
+  <campaignUrn>urn:campaign:ca:ucla:cens:jeroen:loadtest</campaignUrn>
+  <campaignName>jeroen</campaignName>
+  <serverUrl>https://dev1.andwellness.org/</serverUrl>
+  
+  <surveys>
+    <survey>
+      <id>loadtestSurvey</id>
+      <title>Loadtest Survey</title>
+      <description>This survey is used for load testing.</description>
+      <submitText>Done with the loadtest survey.</submitText>
+      <showSummary>false</showSummary>
+      <editSummary>false</editSummary>
+      <summaryText>Load Test</summaryText>
+      <anytime>true</anytime>
+    
+      <contentList>
+        <prompt>
+          <id>timestamp</id>
+          <displayType>event</displayType>
+          <displayLabel>mTimestamp</displayLabel>
+          <promptText>What time is it?</promptText>
+          <abbreviatedText>What time is it?</abbreviatedText>
+          <promptType>timestamp</promptType>
+          <skippable>true</skippable>
+          <skipLabel>Skip</skipLabel>
+        </prompt>
+
+        <prompt>
+          <id>hoursBeforeNowNegTenToZero</id>
+          <displayType>event</displayType>
+          <displayLabel>hoursBeforeNowNegTenToZero</displayLabel>
+          <promptText>Pick a number.</promptText>
+          <abbreviatedText>Pick a number.</abbreviatedText>
+          <promptType>hours_before_now</promptType>
+          <properties>
+            <property>
+              <key>min</key>
+              <label>-10</label>
+            </property>
+            <property>
+              <key>max</key>
+              <label>0</label>
+            </property>
+          </properties>
+          <default>-10</default>  
+          <skippable>true</skippable>
+          <skipLabel>Skip</skipLabel>
+        </prompt>
+        
+        <prompt>
+          <id>hoursBeforeNowZeroToTen</id>
+          <displayType>event</displayType>
+          <displayLabel>hoursBeforeNowZeroToTen</displayLabel>
+          <promptText>Pick a number.</promptText>
+          <abbreviatedText>Pick a number.</abbreviatedText>
+          <promptType>hours_before_now</promptType>
+           <properties>
+            <property>
+              <key>min</key>
+              <label>0</label>
+            </property>
+            <property>
+              <key>max</key>
+              <label>10</label>
+            </property>
+            </properties>
+          <default>0</default>
+          <skippable>true</skippable>
+          <skipLabel>Skip</skipLabel>
+        </prompt>
+        
+        <prompt>
+          <id>hoursBeforeNowNegTenToTen</id>
+          <displayType>event</displayType>
+          <displayLabel>hoursBeforeNowNegTenToTen</displayLabel>
+          <promptText>Pick a number.</promptText>
+          <abbreviatedText>Pick a number.</abbreviatedText>
+          <promptType>hours_before_now</promptType>
+           <properties>
+            <property>
+              <key>min</key>
+              <label>-10</label>
+            </property>
+            <property>
+              <key>max</key>
+              <label>10</label>
+            </property>
+           </properties>
+           <default>10</default>
+          <skippable>true</skippable>
+          <skipLabel>Skip</skipLabel>
+        </prompt>
+        
+        <prompt>
+          <id>hoursBeforeNowBigRange</id>
+          <displayType>event</displayType>
+          <displayLabel>hoursBeforeNowBigRange</displayLabel>
+          <promptText>Pick a number.</promptText>
+          <abbreviatedText>Pick a number.</abbreviatedText>
+          <promptType>hours_before_now</promptType>
+           <properties>
+            <property>
+              <key>min</key>
+              <label>1000</label>
+            </property>
+            <property>
+              <key>max</key>
+              <label>100000</label>
+            </property>
+           </properties>
+           <default>100000</default>
+          <skippable>true</skippable>
+          <skipLabel>Skip</skipLabel>
+        </prompt>
+
+        <prompt>
+          <id>numberNegTenToZero</id>
+          <displayType>event</displayType>
+          <displayLabel>numberNegTenToZero</displayLabel>
+          <promptText>Pick a number.</promptText>
+          <abbreviatedText>Pick a number.</abbreviatedText>
+          <promptType>number</promptType>
+          <properties>
+            <property>
+              <key>min</key>
+              <label>-10</label>
+            </property>
+            <property>
+              <key>max</key>
+              <label>0</label>
+            </property>
+          </properties>
+          <default>-10</default>  
+          <skippable>true</skippable>
+          <skipLabel>Skip</skipLabel>
+        </prompt>
+        
+        <prompt>
+          <id>numberZeroToTen</id>
+          <displayType>event</displayType>
+          <displayLabel>numberZeroToTen</displayLabel>
+          <promptText>Pick a number.</promptText>
+          <abbreviatedText>Pick a number.</abbreviatedText>
+          <promptType>number</promptType>
+           <properties>
+            <property>
+              <key>min</key>
+              <label>0</label>
+            </property>
+            <property>
+              <key>max</key>
+              <label>10</label>
+            </property>
+            </properties>
+          <default>0</default>
+          <skippable>true</skippable>
+          <skipLabel>Skip</skipLabel>
+        </prompt>
+        
+        <prompt>
+          <id>numberNegTenToTen</id>
+          <displayType>event</displayType>
+          <displayLabel>numberNegTenToTen</displayLabel>
+          <promptText>Pick a number.</promptText>
+          <abbreviatedText>Pick a number.</abbreviatedText>
+          <promptType>number</promptType>
+           <properties>
+            <property>
+              <key>min</key>
+              <label>-10</label>
+            </property>
+            <property>
+              <key>max</key>
+              <label>10</label>
+            </property>
+           </properties>
+           <default>10</default>
+          <skippable>true</skippable>
+          <skipLabel>Skip</skipLabel>
+        </prompt>
+        
+        <prompt>
+          <id>numberBigRange</id>
+          <displayType>event</displayType>
+          <displayLabel>numberBigRange</displayLabel>
+          <promptText>Pick a number.</promptText>
+          <abbreviatedText>Pick a number.</abbreviatedText>
+          <promptType>number</promptType>
+           <properties>
+            <property>
+              <key>min</key>
+              <label>1000</label>
+            </property>
+            <property>
+              <key>max</key>
+              <label>100000</label>
+            </property>
+           </properties>
+           <default>100000</default>
+          <skippable>true</skippable>
+          <skipLabel>Skip</skipLabel>
+        </prompt>
+        
+        <prompt>
+          <id>textOneToTen</id>
+          <displayType>event</displayType>
+          <displayLabel>textOneToTen</displayLabel>
+          <promptText>Write some text.</promptText>
+          <abbreviatedText>Write some text.</abbreviatedText>
+          <promptType>text</promptType>
+           <properties>
+            <property>
+              <key>min</key>
+              <label>1</label>
+            </property>
+            <property>
+              <key>max</key>
+              <label>10</label>
+            </property>
+            </properties>
+          <default>Hello.</default>
+          <skippable>true</skippable>
+          <skipLabel>Skip</skipLabel>
+        </prompt>
+        
+        <prompt>
+          <id>textBigRange</id>
+          <displayType>event</displayType>
+          <displayLabel>textBigRange</displayLabel>
+          <promptText>Write some text.</promptText>
+          <abbreviatedText>Write some text.</abbreviatedText>
+          <promptType>text</promptType>
+           <properties>
+            <property>
+              <key>min</key>
+              <label>100</label>
+            </property>
+            <property>
+              <key>max</key>
+              <label>1000</label>
+            </property>
+           </properties>
+           <default>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</default>
+          <skippable>true</skippable>
+          <skipLabel>Skip</skipLabel>
+        </prompt>
+
+        <prompt>
+          <id>photo</id>
+          <displayType>event</displayType>
+          <displayLabel>Photo</displayLabel>
+          <promptText>Take a picture.</promptText>
+          <abbreviatedText>Take a picture.</abbreviatedText>
+          <promptType>photo</promptType>
+          <properties>
+            <property>
+              <key>res</key>
+              <label>720</label>
+            </property>
+          </properties>
+          <skippable>true</skippable>
+          <skipLabel>Skip</skipLabel>
+        </prompt>
+
+        <prompt>
+          <id>singleChoice</id>
+          <displayType>event</displayType>
+          <displayLabel>Rivers</displayLabel>
+          <promptText>Pick a Californian river from this list of main (non-tributary) rivers (listed from coastal North to South then inland North to South).</promptText>
+          <abbreviatedText>California River</abbreviatedText>
+          <promptType>single_choice</promptType>
+          <properties>
+            <property>
+              <key>0</key>
+              <label>Smith River</label>
+            </property>
+            <property>
+              <key>1</key>
+              <label>Klamath River</label>
+            </property>
+            <property>
+              <key>2</key>
+              <label>Mad River</label>
+            </property>
+            <property>
+              <key>3</key>
+              <label>Eel River</label>
+            </property>
+            <property>
+              <key>4</key>
+              <label>Bear River</label>
+            </property>
+            <property>
+              <key>5</key>
+              <label>Mattole River</label>
+            </property>
+            <property>
+              <key>6</key>
+              <label>Ten Mile River</label>
+            </property>
+            <property>
+              <key>7</key>
+              <label>Noyo River</label>
+            </property>
+            <property>
+              <key>8</key>
+              <label>Big River</label>
+            </property>
+            <property>
+              <key>9</key>
+              <label>Little River</label>
+            </property>
+            <property>
+              <key>10</key>
+              <label>Albion River</label>
+            </property>
+            <property>
+              <key>11</key>
+              <label>Navarro River</label>
+            </property>
+            <property>
+              <key>12</key>
+              <label>Garcia River</label>
+            </property>
+            <property>
+              <key>13</key>
+              <label>Gualala River</label>
+            </property>
+            <property>
+              <key>14</key>
+              <label>Russian River</label>
+            </property>
+            <property>
+              <key>15</key>
+              <label>Petaluma River</label>
+            </property>
+            <property>
+              <key>16</key>
+              <label>Napa River</label>
+            </property>
+            <property>
+              <key>17</key>
+              <label>Sacramento River</label>
+            </property>
+            <property>
+              <key>18</key>
+              <label>San Joaquin River</label>
+            </property>
+            <property>
+              <key>19</key>
+              <label>Kings River</label>
+            </property>
+            <property>
+              <key>20</key>
+              <label>Kaweah River</label>
+            </property>
+            <property>
+              <key>21</key>
+              <label>Tule River</label>
+            </property>
+            <property>
+              <key>22</key>
+              <label>White River</label>
+            </property>
+            <property>
+              <key>23</key>
+              <label>Kern River</label>
+            </property>
+            <property>
+              <key>24</key>
+              <label>San Lorenzo River</label>
+            </property>
+            <property>
+              <key>25</key>
+              <label>Pajaro River</label>
+            </property>
+            <property>
+              <key>26</key>
+              <label>Salinas River</label>
+            </property>
+            <property>
+              <key>27</key>
+              <label>Carmel River</label>
+            </property>
+            <property>
+              <key>28</key>
+              <label>Little Sur River</label>
+            </property>
+            <property>
+              <key>29</key>
+              <label>Big Sur River</label>
+            </property>
+            <property>
+              <key>30</key>
+              <label>Santa Maria River</label>
+            </property>
+            <property>
+              <key>31</key>
+              <label>Santa Ynez River</label>
+            </property>
+            <property>
+              <key>32</key>
+              <label>Ventura River</label>
+            </property>
+            <property>
+              <key>33</key>
+              <label>Santa Clara River</label>
+            </property>
+            <property>
+              <key>34</key>
+              <label>Los Angeles River</label>
+            </property>
+            <property>
+              <key>35</key>
+              <label>San Gabriel River</label>
+            </property>
+            <property>
+              <key>36</key>
+              <label>Santa Ana River</label>
+            </property>
+            <property>
+              <key>37</key>
+              <label>Santa Margarita River</label>
+            </property>
+            <property>
+              <key>38</key>
+              <label>San Luis Rey River</label>
+            </property>
+            <property>
+              <key>39</key>
+              <label>San Dieguito River</label>
+            </property>
+            <property>
+              <key>40</key>
+              <label>San Diego River</label>
+            </property>
+            <property>
+              <key>41</key>
+              <label>Streetwater River</label>
+            </property>
+            <property>
+              <key>42</key>
+              <label>Otay River</label>
+            </property>
+            <property>
+              <key>43</key>
+              <label>Tijuana River</label>
+            </property>
+            <property>
+              <key>44</key>
+              <label>Colorado River</label>
+            </property>
+            <property>
+              <key>45</key>
+              <label>Alamo River</label>
+            </property>
+            <property>
+              <key>46</key>
+              <label>New River</label>
+            </property>
+            <property>
+              <key>47</key>
+              <label>Whitewater River</label>
+            </property>
+            <property>
+              <key>48</key>
+              <label>Lost River</label>
+            </property>
+            <property>
+              <key>49</key>
+              <label>Susan River</label>
+            </property>
+            <property>
+              <key>50</key>
+              <label>Truckee River</label>
+            </property>
+            <property>
+              <key>51</key>
+              <label>Amargosa River</label>
+            </property>
+            <property>
+              <key>52</key>
+              <label>Owens River</label>
+            </property>
+            <property>
+              <key>53</key>
+              <label>Mojave River</label>
+            </property>
+          </properties>
+          <skippable>false</skippable>
+          <skipLabel>Skip</skipLabel>
+          <default>34</default>
+        </prompt>
+
+        <prompt>
+          <id>singleChoiceCustom1</id>
+          <displayType>event</displayType>
+          <displayLabel>Single Choice Custom 1</displayLabel>
+          <promptText>Add a choice.</promptText>
+          <abbreviatedText>Add a choice.</abbreviatedText>
+          <promptType>single_choice_custom</promptType>
+          <skippable>true</skippable>
+          <skipLabel>Skip</skipLabel>
+        </prompt>
+        <prompt>
+          <id>singleChoiceCustom2</id>
+          <displayType>event</displayType>
+          <displayLabel>Single Choice Custom 2</displayLabel>
+          <promptText>The door is locked. Do you:</promptText>
+          <abbreviatedText>locked door</abbreviatedText>
+          <promptType>single_choice_custom</promptType>
+          <properties>
+            <property>
+              <key>0</key>
+              <label>kick the door down</label>
+            </property>
+            <property>
+              <key>1</key>
+              <label>knock politely</label>
+            </property>
+            <property>
+              <key>2</key>
+              <label>hunt in your pockets for the key</label>
+            </property>
+            <property>
+              <key>3</key>
+              <label>turn around and walk away</label>
+            </property>
+          </properties>
+          <skippable>true</skippable>
+          <skipLabel>Skip</skipLabel>
+        </prompt>
+
+        <prompt>
+          <id>multiChoice</id>
+          <displayType>event</displayType>
+          <displayLabel>Multi Choice</displayLabel>
+          <promptText>The Transverse Ranges are a group of mountain ranges of southern California, in the Pacific Coast Ranges physiographic region that runs along the Pacific coast from Alaska to Mexico in North America. The Transverse Ranges begin at the southern end of the California Coast Ranges and lie between Santa Barbara and San Diego counties. They derive the name Transverse Ranges due to their East-West orientation, making them transverse to the general North-South orientation of most of California's coastal mountains.</promptText>
+          <abbreviatedText>transverse ranges</abbreviatedText>
+          <promptType>multi_choice</promptType>
+          <properties>
+          
+            <property>
+              <key>0</key>
+              <label>Santa Ynez Mountains</label>
+            </property>
+            <property>
+              <key>1</key>
+              <label>San Rafael Mountains</label>
+            </property>
+            <property>
+              <key>2</key>
+              <label>Sierra Madre Mountains</label>
+            </property>
+            <property>
+              <key>3</key>
+              <label>Topatopa Mountains</label>
+            </property>
+            <property>
+              <key>4</key>
+              <label>Santa Susana Mountains</label>
+            </property>
+            <property>
+              <key>5</key>
+              <label>Santa Monica Mountains</label>
+            </property>
+            <property>
+              <key>6</key>
+              <label>San Gabriel Mountains</label>
+            </property>
+            <property>
+              <key>7</key>
+              <label>San Bernadino Mountains</label>
+            </property>
+            <property>
+              <key>8</key>
+              <label>Little San Bernadino Mountains</label>
+            </property>
+            <property>
+              <key>9</key>
+              <label>Tehachapi Mountains</label>
+            </property>
+            <property>
+              <key>10</key>
+              <label>San Bernadino Mountains</label>
+            </property>
+            <property>
+              <key>11</key>
+              <label>San Bernadino Mountains</label>
+            </property>
+          
+          </properties>
+          <skippable>true</skippable>
+          <skipLabel>Skip</skipLabel>
+        </prompt>
+
+        <prompt>
+          <id>multiChoiceCustom1</id>
+          <displayType>event</displayType>
+          <displayLabel>Multi Choice Custom 1</displayLabel>
+          <promptText>Add a choice:</promptText>
+          <abbreviatedText>add a choice</abbreviatedText>
+          <promptType>multi_choice_custom</promptType>
+          <skippable>true</skippable>
+          <skipLabel>Skip</skipLabel>
+        </prompt>
+        <prompt>
+          <id>multiChoiceCustom2</id>
+          <displayType>event</displayType>
+          <displayLabel>Multi Choice Custom 2</displayLabel>
+          <promptText>Geographical facets of southern California</promptText>
+          <abbreviatedText>geo facets</abbreviatedText>
+          <promptType>multi_choice_custom</promptType>
+          <properties>
+            <property>
+              <key>0</key>
+              <label>The Beach</label>
+            </property>
+            <property>
+              <key>1</key>
+              <label>The Desert</label>
+            </property>
+            <property>
+              <key>2</key>
+              <label>The Mountains</label>
+            </property>
+          </properties>
+          <skippable>true</skippable>
+          <skipLabel>Skip</skipLabel>
+        </prompt>
+	 </contentList>
+   </survey>
+
+  </surveys>
+</campaign>
