@@ -95,6 +95,10 @@ oh.call <- function(xpath, serverurl=getOption("SERVERURL"), token=getOption("TO
 	if(xhr$result == "success"){
 		return(xhr)
 	} else {
+		if(!is.null(xhr$errors[[1]]$text) && xhr$errors[[1]]$text == "The token is unknown."){
+			oh.logout();
+			stop("The token is unknown. Your session might have timed out. Please re-login.")
+		}
 		stop(xhr$errors[[1]]$text);
 	}
 }

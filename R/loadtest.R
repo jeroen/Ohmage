@@ -126,7 +126,7 @@ loadtest <- function(n.users = 10, n.days=5, n.responses=2, xmlfile = system.fil
 	
 	#create campaign
 	oh.campaign.create(xml=paste(readLines(myxmlfile), collapse="\n"), class_urn_list=class_urn);
-	creationtime <- as.character(oh.campaign.read(output="short")[campaignUrn,"creation_timestamp"]);
+	creationtime <- as.character(oh.campaign.read(output_format="short")[campaignUrn,"creation_timestamp"]);
 	
 	#generate usernames.
 	usernames <- paste(user.prefix,".", substring(oldname, 1,5), "." ,n.users, ".",numtolet(0:(n.users-1), ceiling(log(n.users,10))), sep="");

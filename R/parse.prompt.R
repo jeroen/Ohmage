@@ -7,7 +7,12 @@
 parse.prompt <- function(obj){
 	varname <- names(obj);
 	prompt_type <- obj[[1]]$context$prompt_type;
-	values <- sapply(obj[[1]]$values, parsevector, simplify=(prompt_type!="multi_choice"));
+	values <- lapply(obj[[1]]$values, parsevector);
+	if(prompt_type=="multi_choice" || prompt_type=="multi_choice_custom"){
+		values <- identity(values);
+	} else {
+		values <- unlist(values);
+	}
 	choice_glossary <- obj[[1]]$context$choice_glossary;
 	
 	#check if there is a glossary:
@@ -37,9 +42,11 @@ parse.prompt <- function(obj){
 	
 	newvar <- switch(prompt_type,
 		single_choice = factor(values, levels, labels, ordered=TRUE),
-		single_choice_custom = factor(values, levels, labels, ordered=TRUE),
+		#single_choice_custom = factor(values, levels, labels, ordered=TRUE),
+		single_choice_custom = factor(values, levels=unique(c(labels, values)), ordered=TRUE),
 		multi_choice = multifactor(values, levels, labels),
-		multi_choice_custom = multifactor(values, levels, labels),
+		#multi_choice_custom = multifactor(values, levels, labels),
+		multi_choice_custom = multifactor(values, unique(c(labels, unlist(values)))),
 		number = as.numeric(values), #strings are converted to NA without warning
 		remote_activity = as.numeric(values),
 		timestamp = as.POSIXct(strptime(values, format="%Y-%m-%dT%H:%M:%S")),

@@ -1,9 +1,3 @@
-# TODO: Add comment
-# 
-# Author: jeroen
-###############################################################################
-
-
 #' Read survey responses
 #' @param campaign_urn campaign id
 #' @param prompt_id_list comma seperated ist of promt id's

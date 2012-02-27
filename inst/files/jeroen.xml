@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <campaign>
-  <campaignUrn>urn:campaign:ca:ucla:cens:jeroen:loadtest</campaignUrn>
-  <campaignName>jeroen</campaignName>
+  <campaignUrn>urn:campaign:ca:ucla:cens:jeroen_test</campaignUrn>
+  <campaignName>Jeroen</campaignName>
   <serverUrl>https://dev1.andwellness.org/</serverUrl>
   
   <surveys>
     <survey>
-      <id>loadtestSurvey</id>
-      <title>Loadtest Survey</title>
-      <description>This survey is used for load testing.</description>
-      <submitText>Done with the loadtest survey.</submitText>
+    
+      <id>testSurvey</id>
+      <title>Test Survey</title>
+      <description>This is a test survey.</description>
+      <submitText>Done with the test survey.</submitText>
       <showSummary>false</showSummary>
       <editSummary>false</editSummary>
-      <summaryText>Load Test</summaryText>
-      <anytime>true</anytime>
-    
+      <summaryText>Test</summaryText>
+      <anytime>true</anytime>    
+   
       <contentList>
         <prompt>
           <id>timestamp</id>
@@ -114,7 +115,7 @@
           <skippable>true</skippable>
           <skipLabel>Skip</skipLabel>
         </prompt>
-
+	
         <prompt>
           <id>numberNegTenToZero</id>
           <displayType>event</displayType>
@@ -246,7 +247,7 @@
           <skippable>true</skippable>
           <skipLabel>Skip</skipLabel>
         </prompt>
-
+	
         <prompt>
           <id>photo</id>
           <displayType>event</displayType>
@@ -263,7 +264,7 @@
           <skippable>true</skippable>
           <skipLabel>Skip</skipLabel>
         </prompt>
-
+	
         <prompt>
           <id>singleChoice</id>
           <displayType>event</displayType>
@@ -493,7 +494,7 @@
           <skipLabel>Skip</skipLabel>
           <default>34</default>
         </prompt>
-
+     
         <prompt>
           <id>singleChoiceCustom1</id>
           <displayType>event</displayType>
@@ -532,7 +533,7 @@
           <skippable>true</skippable>
           <skipLabel>Skip</skipLabel>
         </prompt>
-
+	
         <prompt>
           <id>multiChoice</id>
           <displayType>event</displayType>
@@ -582,20 +583,12 @@
               <key>9</key>
               <label>Tehachapi Mountains</label>
             </property>
-            <property>
-              <key>10</key>
-              <label>San Bernadino Mountains</label>
-            </property>
-            <property>
-              <key>11</key>
-              <label>San Bernadino Mountains</label>
-            </property>
           
           </properties>
           <skippable>true</skippable>
           <skipLabel>Skip</skipLabel>
         </prompt>
-
+	 
         <prompt>
           <id>multiChoiceCustom1</id>
           <displayType>event</displayType>
@@ -630,8 +623,46 @@
           <skippable>true</skippable>
           <skipLabel>Skip</skipLabel>
         </prompt>
-	 </contentList>
-   </survey>
+	
+        <prompt>
+          <id>AttentionGame</id>
+          <displayType>event</displayType>
+          <displayLabel>Attention Game</displayLabel>
+          <unit>Score</unit>
+          <promptText>Press the button below to play the game. To play, tap every letter except the letter 'X'.</promptText>
+          <abbreviatedText>Attention Game</abbreviatedText>
+          <promptType>remote_activity</promptType>
+          <properties>
+            <property>
+              <key>package</key>
+              <label>edu.ucla.cens.FocusGame</label>
+            </property>
+            <property>
+              <key>activity</key>
+              <label>edu.ucla.cens.FocusGame.Game</label>
+            </property>
+            <property>
+              <key>action</key>
+              <label>edu.ucla.cens.FocusGame.Game.LAUNCH</label>
+            </property>
+            <property>
+              <key>autolaunch</key>
+              <label>false</label>
+            </property>
+            <property>
+              <key>retries</key>
+              <label>10</label>
+            </property>
+            <property>
+              <key>min_runs</key>
+              <label>1</label>
+            </property>
+          </properties>
+          <skippable>true</skippable>
+          <skipLabel>Skip</skipLabel>
+        </prompt>
+      </contentList>
+    </survey>
 
   </surveys>
 </campaign>

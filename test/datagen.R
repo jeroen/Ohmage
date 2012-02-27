@@ -12,7 +12,5 @@ for(thissize in sizes){
   loadtest(thissize, user.prefix="tests");
 }
 
-#new server
-library(Ohmage);
-oh.login('ohmage.admin','ohmage.passwd','https://cens.opencpu.org/app');
+
 
