@@ -8,9 +8,16 @@
 #' @param ... other stuff passed to oh.call
 #' @return a list
 #' @export
-oh.survey_response.function.read <- function(campaign_urn, id="privacy_state", privacy_state_item_list="date,survey", ...){
+oh.survey_response.function.read <- function(campaign_urn, id="privacy_state", privacy_state=NULL, privacy_state_item_list="date,survey", ...){
+	
+	if(!is.null(privacy_state)){
+		stop("Privacy_state argument was matched for function read. This should never happen. Probably conflicting with privacy_state_item_list.")
+	}
+	
 	xhr <- oh.call("/survey_response/function/read", campaign_urn=campaign_urn, id=id, privacy_state_item_list=privacy_state_item_list, ...)
 	mydata <- xhr$data;
+	
+	
 	
 	if(length(data) == 0){
 		return(data.frame());
