@@ -18,8 +18,7 @@ oh.survey_response.function.read <- function(campaign_urn, id="privacy_state", p
 	mydata <- xhr$data;
 	
 	
-	
-	if(length(data) == 0){
+	if(length(mydata) == 0){
 		return(data.frame());
 	}
 	
