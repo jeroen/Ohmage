@@ -87,7 +87,7 @@ loadtest <- function(n.users = 10, n.days=5, n.responses=2, xmlfile = system.fil
 	#statics
 	class_urn <- "urn:class:loadtest";
 	password <- "Test.123";
-	datagenjar <- system.file(package="Ohmage", "files/andwellness-survey-generator-2.9.jar");
+	datagenjar <- system.file(package="Ohmage", "files/andwellness-survey-generator-2.11.jar");
 	ohmage_username <- getOption("ohmage_username")
 	
 	#jsonfile <- gsub("Rtmp.*", "datagen.json", tempdir()); # "/tmp/datagen.json"
