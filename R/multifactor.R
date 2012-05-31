@@ -10,7 +10,7 @@
 #' @param labels a vector with labels
 #' @param ordered ordered or unordered factor
 #' @return a multifactor object
-#' @aliases as.vector.multifactor expand.multifactor dim.multifactor is.multifactor as.vector.multifactor rep.multifactor [.multifactor [[.multifactor
+#' @aliases as.vector.multifactor expand.multifactor facdim is.multifactor as.vector.multifactor rep.multifactor [.multifactor [[.multifactor
 #' @export
 multifactor <- function(values, levels = unique(unlist(values)), labels=levels, ordered=TRUE){
 	
@@ -57,9 +57,10 @@ expand.multifactor <- function(x){
 }
 
 #' @export
-dim.multifactor <- function(x){
+facdim <- function(x){
 	return(sapply(strsplit(x, "+", fixed=TRUE), length));
 }
+
 
 #' @export
 is.multifactor <- function(x){

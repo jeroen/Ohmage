@@ -3,7 +3,7 @@
 \title{Survey Response Function Read}
 \usage{
   oh.survey_response.function.read(campaign_urn,
-    id = "privacy_state",
+    id = "privacy_state", privacy_state = NULL,
     privacy_state_item_list = "date,survey", ...)
 }
 \arguments{
@@ -11,6 +11,8 @@
 
   \item{id}{Function id. The currently supported id is
   privacy_state}
+
+  \item{privacy_state}{depricated. Should be NULL.}
 
   \item{privacy_state_item_list}{comma seperated list of
   output}

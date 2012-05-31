@@ -4,6 +4,7 @@
 #' 
 #' @param campaign_urn campaign urn
 #' @param id Function id. The currently supported id is privacy_state
+#' @param privacy_state depricated. Should be NULL. 
 #' @param privacy_state_item_list comma seperated list of output
 #' @param ... other stuff passed to oh.call
 #' @return a list

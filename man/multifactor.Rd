@@ -1,7 +1,7 @@
 \name{multifactor}
 \alias{as.vector.multifactor}
-\alias{dim.multifactor}
 \alias{expand.multifactor}
+\alias{facdim}
 \alias{is.multifactor}
 \alias{multifactor}
 \alias{[.multifactor}

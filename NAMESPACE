@@ -1,6 +1,6 @@
 export(as.vector.multifactor)
-export(dim.multifactor)
 export(expand.multifactor)
+export(facdim)
 export(is.multifactor)
 export(loadtest)
 export(loadtest.wipe)

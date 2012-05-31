@@ -2,6 +2,7 @@
 #' 
 #' @param date date in ISO format
 #' @param username name of user to query (only works when server allows to see others data). 
+#' @param column_list variables to be returned
 #' @param ... stuff passed to oh.call
 #' @return a dataframe with mobility data
 #' @export
