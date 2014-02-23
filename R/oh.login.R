@@ -7,6 +7,17 @@
 #' @importFrom RCurl postForm getCurlHandle dynCurlReader parseHTTPHeader fileUpload
 #' @import methods
 #' @export
+#' @examples library(Ohmage)
+#' \dontrun{
+#' #authentication works like a cookie.
+#' #oh.login("ohmage.admin", "ohmage.passwd", "https://example.com/app")
+#' 
+#' #list campaigns you are in
+#' #oh.campaign.read()
+#' 
+#' #read some data
+#' #oh.survey_response.read("urn:ohmage:campaign:mycampaign");
+#' }
 oh.login <- function(user, password, serverurl, ...){
 	if(!is.null(getOption("TOKEN"))){
 		stop("Already logged in. Please logout first.");
