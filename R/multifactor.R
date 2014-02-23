@@ -1,9 +1,3 @@
-# TODO: Add comment
-# 
-# Author: jeroen
-###############################################################################
-
-
 #' Multifactor is a datastructure for survey items in the form of 'check all that apply'. Every response has multiple values.
 #' @param values a list of vectors with response values
 #' @param levels a vector with possible values 

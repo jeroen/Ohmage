@@ -1,9 +1,3 @@
-# TODO: Add comment
-# 
-# Author: jeroen
-###############################################################################
-
-
 #' Create a new user	
 #' @param username username
 #' @param password password

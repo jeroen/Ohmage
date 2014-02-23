@@ -1,8 +1,3 @@
-# TODO: Add comment
-# 
-# Author: jeroen
-###############################################################################
-
 #' Logout from an ohmage session
 #' @export
 oh.logout <- function(){

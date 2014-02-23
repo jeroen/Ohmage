@@ -1,9 +1,3 @@
-# TODO: Add comment
-# 
-# Author: jeroen
-###############################################################################
-
-
 #' Read info about a class
 #' @param class_urn_list list of class id's
 #' @param ... other arguments passed to ohmage

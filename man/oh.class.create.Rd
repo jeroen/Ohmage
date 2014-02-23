@@ -2,8 +2,7 @@
 \alias{oh.class.create}
 \title{Create a new class}
 \usage{
-  oh.class.create(class_urn, class_name,
-    description = "My new class.", ...)
+oh.class.create(class_urn, class_name, description = "My new class.", ...)
 }
 \arguments{
   \item{class_urn}{class id}
@@ -15,6 +14,6 @@
   \item{...}{other arguments passed to ohmage}
 }
 \description{
-  Create a new class
+Create a new class
 }
 

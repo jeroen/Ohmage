@@ -1,7 +1,3 @@
-# Author: jeroen
-###############################################################################
-
-
 oh.call <- function(xpath, serverurl=getOption("SERVERURL"), token=getOption("TOKEN"), 
 	responseformat="json", style="post", verbose=FALSE, recycle=FALSE, ...){
 	

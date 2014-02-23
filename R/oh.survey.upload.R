@@ -1,8 +1,3 @@
-# TODO: Add comment
-# 
-# Author: jeroen
-###############################################################################
-
 ruuid <- function(){
   hex <- c(0:9, letters[1:6]);
   index <- ceiling(runif(32,0,16));

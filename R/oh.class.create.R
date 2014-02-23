@@ -1,9 +1,3 @@
-# TODO: Add comment
-# 
-# Author: jeroen
-###############################################################################
-
-
 #' Create a new class
 #' @param class_urn class id
 #' @param class_name class name

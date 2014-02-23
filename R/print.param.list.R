@@ -1,9 +1,3 @@
-# TODO: Add comment
-# 
-# Author: jeroen
-###############################################################################
-
-
 print.param.list <- function(HTTPPARAMS){
 	for(i in 1:length(HTTPPARAMS)){
 		if(class(HTTPPARAMS[[i]]) == "FileUploadInfo"){

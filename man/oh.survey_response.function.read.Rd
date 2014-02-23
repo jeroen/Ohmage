@@ -2,9 +2,8 @@
 \alias{oh.survey_response.function.read}
 \title{Survey Response Function Read}
 \usage{
-  oh.survey_response.function.read(campaign_urn,
-    id = "privacy_state", privacy_state = NULL,
-    privacy_state_item_list = "date,survey", ...)
+oh.survey_response.function.read(campaign_urn, id = "privacy_state",
+  privacy_state = NULL, privacy_state_item_list = "date,survey", ...)
 }
 \arguments{
   \item{campaign_urn}{campaign urn}
@@ -20,12 +19,12 @@
   \item{...}{other stuff passed to oh.call}
 }
 \value{
-  a list
+a list
 }
 \description{
-  Allows users with the appropriate permissions to read
-  aggregate data about survey responses. The API takes an
-  id parameter that tells the system which function to
-  perform on the data.
+Allows users with the appropriate permissions to read
+aggregate data about survey responses. The API takes an id
+parameter that tells the system which function to perform
+on the data.
 }
 

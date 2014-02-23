@@ -2,8 +2,8 @@
 \alias{oh.survey_response.update}
 \title{Update the privacy status of a survey response}
 \usage{
-  oh.survey_response.update(campaign_urn, survey_key,
-    privacy_state = "shared", ...)
+oh.survey_response.update(campaign_urn, survey_key, privacy_state = "shared",
+  ...)
 }
 \arguments{
   \item{campaign_urn}{campaign id}
@@ -15,6 +15,6 @@
   \item{...}{other arguments passed to oh.call}
 }
 \description{
-  Update the privacy status of a survey response
+Update the privacy status of a survey response
 }
 

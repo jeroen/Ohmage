@@ -1,9 +1,3 @@
-# TODO: Add comment
-# 
-# Author: jeroen
-###############################################################################
-
-
 #' Create a new campaign
 #' @param xml campaign.xml
 #' @param running_state if campaign is running or not

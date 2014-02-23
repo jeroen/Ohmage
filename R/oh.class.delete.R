@@ -1,5 +1,3 @@
-
-
 #' Delete a class from the server
 #' @param class_urn class id
 #' @param ... other args passed to ohmage 

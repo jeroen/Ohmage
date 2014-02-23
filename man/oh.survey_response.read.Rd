@@ -2,13 +2,11 @@
 \alias{oh.survey_response.read}
 \title{Read survey responses}
 \usage{
-  oh.survey_response.read(campaign_urn,
-    prompt_id_list = "urn:ohmage:special:all",
-    privacy_state = "both",
-    column_list = "urn:ohmage:user:id,urn:ohmage:prompt:response,urn:ohmage:context:timestamp",
-    output_format = "json-columns",
-    user_list = "urn:ohmage:special:all",
-    to.data.frame = TRUE, ...)
+oh.survey_response.read(campaign_urn,
+prompt_id_list = "urn:ohmage:special:all", privacy_state = "both",
+column_list="urn:ohmage:user:id,urn:ohmage:prompt:response,urn:ohmage:context:timestamp",
+output_format = "json-columns", user_list = "urn:ohmage:special:all",
+to.data.frame = TRUE, ...)
 }
 \arguments{
   \item{campaign_urn}{campaign id}
@@ -29,6 +27,6 @@
   \item{...}{other args passed to ohmage}
 }
 \description{
-  Read survey responses
+Read survey responses
 }
 

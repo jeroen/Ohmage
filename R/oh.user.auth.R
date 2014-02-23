@@ -1,8 +1,3 @@
-# TODO: Add comment
-# 
-# Author: jeroen
-###############################################################################
-
 #' Retrieve hashed passwd for a user
 #' @param user username
 #' @param password passwd

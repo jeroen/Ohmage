@@ -5,10 +5,8 @@
 #' @param ... extra parameters for oh.call
 #' @importFrom RJSONIO fromJSON
 #' @importFrom RCurl postForm getCurlHandle dynCurlReader parseHTTPHeader fileUpload
-#' @return null
-#' @author jeroen
+#' @import methods
 #' @export
-
 oh.login <- function(user, password, serverurl, ...){
 	if(!is.null(getOption("TOKEN"))){
 		stop("Already logged in. Please logout first.");

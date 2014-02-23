@@ -1,9 +1,3 @@
-# TODO: Add comment
-# 
-# Author: jeroen
-###############################################################################
-
-
 #' Update a class
 #' @param class_urn class id 
 #' @param ... arguments passed to ohmage

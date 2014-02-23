@@ -2,7 +2,7 @@
 \alias{oh.login}
 \title{Authenticate with an ohmage server}
 \usage{
-  oh.login(user, password, serverurl, ...)
+oh.login(user, password, serverurl, ...)
 }
 \arguments{
   \item{user}{ohmage username}
@@ -13,13 +13,7 @@
 
   \item{...}{extra parameters for oh.call}
 }
-\value{
-  null
-}
 \description{
-  Authenticate with an ohmage server
-}
-\author{
-  jeroen
+Authenticate with an ohmage server
 }
 

@@ -2,7 +2,7 @@
 \alias{oh.user.auth}
 \title{Retrieve hashed passwd for a user}
 \usage{
-  oh.user.auth(user, password, ...)
+oh.user.auth(user, password, ...)
 }
 \arguments{
   \item{user}{username}
@@ -12,9 +12,9 @@
   \item{...}{other argus}
 }
 \value{
-  pw hash
+pw hash
 }
 \description{
-  Retrieve hashed passwd for a user
+Retrieve hashed passwd for a user
 }
 

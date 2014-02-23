@@ -1,9 +1,3 @@
-# TODO: Add comment
-# 
-# Author: jeroen
-###############################################################################
-
-
 increment.curlcount <- function(){
 	mycount <- getOption("CURLCOUNT");
 	if(mycount < 1000){

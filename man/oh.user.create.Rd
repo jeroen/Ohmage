@@ -2,9 +2,8 @@
 \alias{oh.user.create}
 \title{Create a new user}
 \usage{
-  oh.user.create(username, password, admin = FALSE,
-    enabled = TRUE, new_account = FALSE,
-    campaign_creation_privilege = FALSE, ...)
+oh.user.create(username, password, admin = FALSE, enabled = TRUE,
+  new_account = FALSE, campaign_creation_privilege = FALSE, ...)
 }
 \arguments{
   \item{username}{username}
@@ -24,6 +23,6 @@
   \item{...}{other arguments passed on to ohmage}
 }
 \description{
-  Create a new user
+Create a new user
 }
 

@@ -8,7 +8,9 @@
 #' @param to.data.frame if data should be converted to a dataframe
 #' @param ... other args passed to ohmage
 #' @export
-oh.survey_response.read <- function(campaign_urn, prompt_id_list="urn:ohmage:special:all", privacy_state="both", column_list="urn:ohmage:user:id,urn:ohmage:prompt:response,urn:ohmage:context:timestamp", output_format="json-columns", user_list="urn:ohmage:special:all", to.data.frame=TRUE, ...){
+oh.survey_response.read <- function(campaign_urn, prompt_id_list="urn:ohmage:special:all", privacy_state="both", 
+	column_list="urn:ohmage:user:id,urn:ohmage:prompt:response,urn:ohmage:context:timestamp", output_format="json-columns", 
+	user_list="urn:ohmage:special:all", to.data.frame=TRUE, ...){
 
 	#if prompt_id_list is a vector:
 	prompt_id_list <- paste(prompt_id_list, collapse=",");

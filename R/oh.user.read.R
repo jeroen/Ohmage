@@ -1,9 +1,3 @@
-# TODO: Add comment
-# 
-# Author: jeroen
-###############################################################################
-
-
 #' Read info about a user
 #' @param user_list username
 #' @param ... other args passed to ohmage

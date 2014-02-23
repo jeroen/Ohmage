@@ -2,9 +2,8 @@
 \alias{oh.campaign.create}
 \title{Create a new campaign}
 \usage{
-  oh.campaign.create(xml, running_state = "running",
-    privacy_state = "shared", class_urn_list = "",
-    description = "My campaign.", ...)
+oh.campaign.create(xml, running_state = "running", privacy_state = "shared",
+  class_urn_list = "", description = "My campaign.", ...)
 }
 \arguments{
   \item{xml}{campaign.xml}
@@ -20,6 +19,6 @@
   \item{...}{other stuff passed to the server}
 }
 \description{
-  Create a new campaign
+Create a new campaign
 }
 

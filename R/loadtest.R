@@ -1,8 +1,3 @@
-# TODO: Add comment
-# 
-# Author: jeroen
-###############################################################################
-
 enquote <- function(string){
   return(paste('"', string, '"', sep=""));
 }

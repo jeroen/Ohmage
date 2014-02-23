@@ -2,10 +2,10 @@
 \alias{loadtest}
 \title{Data generations for loadtesting}
 \usage{
-  loadtest(n.users = 10, n.days = 5, n.responses = 2,
-    xmlfile = system.file(package = "Ohmage", "files/jeroen.xml"),
-    recycle = TRUE, verbose = FALSE, shareall = TRUE,
-    user.prefix = "loadtest")
+loadtest(n.users = 10, n.days = 5, n.responses = 2,
+  xmlfile = system.file(package = "Ohmage", "files/jeroen.xml"),
+  recycle = TRUE, verbose = FALSE, shareall = TRUE,
+  user.prefix = "loadtest")
 }
 \arguments{
   \item{n.users}{number of users to generate}
@@ -27,6 +27,6 @@
   names.}
 }
 \description{
-  Data generations for loadtesting
+Data generations for loadtesting
 }
 

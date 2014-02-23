@@ -1,9 +1,3 @@
-# TODO: Add comment
-# 
-# Author: jeroen
-###############################################################################
-
-
 #' Delete a campaign from the server
 #' @param campaign_urn campaign uuid
 #' @param ... other arguments passed to ohmage.

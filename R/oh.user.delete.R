@@ -1,9 +1,3 @@
-# TODO: Add comment
-# 
-# Author: jeroen
-###############################################################################
-
-
 #' Delete users from the server
 #' @param user_list comma seperated list of users
 #' @param ... other arguments passed on to ohmage

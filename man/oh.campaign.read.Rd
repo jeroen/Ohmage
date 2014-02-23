@@ -2,8 +2,7 @@
 \alias{oh.campaign.read}
 \title{List campaigns available on the server}
 \usage{
-  oh.campaign.read(output_format = "short",
-    to.data.frame = TRUE, ...)
+oh.campaign.read(output_format = "short", to.data.frame = TRUE, ...)
 }
 \arguments{
   \item{output_format}{short or long}
@@ -14,6 +13,6 @@
   \item{...}{other arguments passed to ohmage}
 }
 \description{
-  List campaigns available on the server
+List campaigns available on the server
 }
 

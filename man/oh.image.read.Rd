@@ -2,7 +2,7 @@
 \alias{oh.image.read}
 \title{Download an image}
 \usage{
-  oh.image.read(campaign_urn, owner, id, ...)
+oh.image.read(campaign_urn, owner, id, ...)
 }
 \arguments{
   \item{campaign_urn}{campaign id}
@@ -14,9 +14,9 @@
   \item{...}{other parameters}
 }
 \value{
-  path to image
+path to image
 }
 \description{
-  Download an image
+Download an image
 }
 

@@ -1,9 +1,3 @@
-# TODO: Add comment
-# 
-# Author: jeroen
-###############################################################################
-
-
 parse.prompt <- function(obj){
 	varname <- names(obj);
 	prompt_type <- obj[[1]]$context$prompt_type;

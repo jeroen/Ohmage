@@ -1,9 +1,3 @@
-# TODO: Add comment
-# 
-# Author: jeroen
-###############################################################################
-
-
 #' List campaigns available on the server
 #' @param output_format short or long
 #' @param to.data.frame should response be converted to a dataframe

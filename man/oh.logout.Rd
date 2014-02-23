@@ -2,9 +2,9 @@
 \alias{oh.logout}
 \title{Logout from an ohmage session}
 \usage{
-  oh.logout()
+oh.logout()
 }
 \description{
-  Logout from an ohmage session
+Logout from an ohmage session
 }
 

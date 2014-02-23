@@ -1,9 +1,3 @@
-# TODO: Add comment
-# 
-# Author: jeroen
-###############################################################################
-
-
 renewCurl <- function(){
 	#unlockBinding("OhCurlHandle", as.environment("package:Ohmage"));
 	#unlockBinding("OhCurlReader", as.environment("package:Ohmage"));

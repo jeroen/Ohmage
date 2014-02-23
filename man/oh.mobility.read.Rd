@@ -2,9 +2,8 @@
 \alias{oh.mobility.read}
 \title{Read Mobility data}
 \usage{
-  oh.mobility.read(date = today(),
-    username = getOption("ohmage_username"), column_list,
-    ...)
+oh.mobility.read(date = today(), username = getOption("ohmage_username"),
+  column_list, ...)
 }
 \arguments{
   \item{date}{date in ISO format}
@@ -17,9 +16,9 @@
   \item{...}{stuff passed to oh.call}
 }
 \value{
-  a dataframe with mobility data
+a dataframe with mobility data
 }
 \description{
-  Read Mobility data
+Read Mobility data
 }
 
