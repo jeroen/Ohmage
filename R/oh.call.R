@@ -33,7 +33,7 @@ oh.call <- function(xpath, serverurl=getOption("SERVERURL"), token=getOption("TO
 
 	#actual HTTP POST
 	postForm(curl = curl, uri=posturl, style=style, binary=TRUE, .params=HTTPPARAMS,
-		.opts = list(sslversion=3, ssl.verifyhost= FALSE, ssl.verifypeer=FALSE, headerfunction = h$update, verbose = verbose, connecttimeout=10));	
+		.opts = list(ssl.verifyhost= FALSE, ssl.verifypeer=FALSE, headerfunction = h$update, verbose = verbose, connecttimeout=10));	
 	
 	
 	#parse response
